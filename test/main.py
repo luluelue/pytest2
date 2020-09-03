@@ -11,7 +11,9 @@ import sys
 # project\\pytest1\\venv27\\lib\\site-packages', 'G:\\py_project\\pytest1\\venv27\\lib\\site-packages\\pydevd-pycharm.egg']
 
 def debug():
-    sys.path.append("C:/Users/11329/Desktop/pydevd-pycharm")
+    # 直接导入egg文件也能够执行
+    sys.path.append("C:/Users/11329/Desktop/pydevd-pycharm.egg")
+    # sys.path.append("C:/Users/11329/Desktop/pydevd-pycharm")
     import pydevd
     pydevd.settrace('localhost', port=11111, stdoutToServer=True, stderrToServer=True)
     # 打印python解释器的位置
