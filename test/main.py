@@ -9,10 +9,12 @@ import sys
 # 1\\venv27\\lib', 'G:\\py_project\\pytest1\\venv27\\lib\\plat-win', 'G:\\py_project\\pytest1\\venv27\\lib\\lib-tk', 'G:\\py_project\\pytes
 # t1\\venv27\\Scripts', 'C:\\Python27\\Lib', 'C:\\Python27\\DLLs', 'C:\\Python27\\Lib\\lib-tk', 'G:\\py_project\\pytest1\\venv27', 'G:\\py_
 # project\\pytest1\\venv27\\lib\\site-packages', 'G:\\py_project\\pytest1\\venv27\\lib\\site-packages\\pydevd-pycharm.egg']
+
 def debug():
     sys.path.append("C:/Users/11329/Desktop/pydevd-pycharm")
     import pydevd
     pydevd.settrace('localhost', port=11111, stdoutToServer=True, stderrToServer=True)
+    # 打印python解释器的位置
     print sys.executable
     print sys.path
     print "aaaaa"
