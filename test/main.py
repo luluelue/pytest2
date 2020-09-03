@@ -1,33 +1,22 @@
-from inspect import signature
 from inspect import isfunction
 import types
 import sys
 
-
-class Test():
-
-    def __init__(self, name):
-        self.name = name
-
-    def main1(self):
-        print("我是类函数")
-
-    def main2(self, arg1, aa=100):
-        print("函数2")
-
-
-def main():
-    test = Test("张三")
-    # print(dir(test))
-    # print(test.__dict__.keys())
-    for key in dir(test):
-        print(key)
-        func = getattr(test, key)
-        if (callable(func)):
-            print(signature(func))
-        # if isfunction(func):
-
+# 在虚拟环境下
+# easy_install pydevd-pycharm.egg
+# 安装完成后 sys.path = ['G:\\py_project\\pytest1\\test', 'C:\\Windows\\SYSTEM32\\python27.zip', 'G:\\py_project\\pytest1\\venv27\\DLLs', 'G:\\py_project\\pytest
+# 1\\venv27\\lib', 'G:\\py_project\\pytest1\\venv27\\lib\\plat-win', 'G:\\py_project\\pytest1\\venv27\\lib\\lib-tk', 'G:\\py_project\\pytes
+# t1\\venv27\\Scripts', 'C:\\Python27\\Lib', 'C:\\Python27\\DLLs', 'C:\\Python27\\Lib\\lib-tk', 'G:\\py_project\\pytest1\\venv27', 'G:\\py_
+# project\\pytest1\\venv27\\lib\\site-packages', 'G:\\py_project\\pytest1\\venv27\\lib\\site-packages\\pydevd-pycharm.egg']
+def debug():
+    import pydevd
+    pydevd.settrace('localhost', port=11111, stdoutToServer=True, stderrToServer=True)
+    print sys.path
+    print "aaaaa"
+    print "aaaaa"
+    print "aaaaa"
+    pass
 
 
 if __name__ == '__main__':
-    main()
+    debug()
