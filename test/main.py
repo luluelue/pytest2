@@ -5,10 +5,9 @@ import sys
 
 # 在虚拟环境下
 # easy_install pydevd-pycharm.egg
-# 安装完成后 sys.path = ['G:\\py_project\\pytest1\\test', 'C:\\Windows\\SYSTEM32\\python27.zip', 'G:\\py_project\\pytest1\\venv27\\DLLs', 'G:\\py_project\\pytest
-# 1\\venv27\\lib', 'G:\\py_project\\pytest1\\venv27\\lib\\plat-win', 'G:\\py_project\\pytest1\\venv27\\lib\\lib-tk', 'G:\\py_project\\pytes
-# t1\\venv27\\Scripts', 'C:\\Python27\\Lib', 'C:\\Python27\\DLLs', 'C:\\Python27\\Lib\\lib-tk', 'G:\\py_project\\pytest1\\venv27', 'G:\\py_
-# project\\pytest1\\venv27\\lib\\site-packages', 'G:\\py_project\\pytest1\\venv27\\lib\\site-packages\\pydevd-pycharm.egg']
+
+# 修改系统变量：PYTHONDONTWRITEBYTECODE=x
+# 删除pyc并，禁止pyc的生成
 
 def debug():
     # 直接导入egg文件也能够执行
@@ -22,7 +21,7 @@ def debug():
     print "aaaaa"
     print "aaaaa"
     print "aaaaa"
-    pass
+
 
 
 if __name__ == '__main__':
